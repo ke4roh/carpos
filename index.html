@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Carpos : A web interface for Sonos control (sonosweb) by Andy Wick">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Carpos</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ke4roh/carpos">View on GitHub</a>
+
+          <h1 id="project_title">Carpos</h1>
+          <h2 id="project_tagline">A web interface for Sonos control (sonosweb) by Andy Wick</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ke4roh/carpos/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ke4roh/carpos/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is it?</h2>
+
+<p>A flexible web based controller for the Sonos Digital Music System.</p>
+
+<h3>
+<a id="the-download-contains-two-parts" class="anchor" href="#the-download-contains-two-parts" aria-hidden="true"><span class="octicon octicon-link"></span></a>The download contains two parts:</h3>
+
+<ul>
+<li>Server software - runs on any system that supports Perl, tested on Windows XP, OS X, and Linux</li>
+<li>Browser software - runs inside of any web browser, tested on everything from Firefox to a T-Mobile Sidekick II cellphone</li>
+</ul>
+
+<h3>
+<a id="included-user-interfaces" class="anchor" href="#included-user-interfaces" aria-hidden="true"><span class="octicon octicon-link"></span></a>Included User Interfaces:</h3>
+
+<p>There are several different interfaces included. Click on the links for screenshots.</p>
+
+<ul>
+<li>/isonos - Wonderful iTunes influenced UI by Xiao Yu. - Available in 0.52 or later</li>
+<li>/simple - The original UI, doesn't use any Javascript, DHTML, or AJAX, instead it is currently "Old-School" and uses just - frames. This of course means it has quirks, but it will work on almost ANY browser.</li>
+<li>/simplejs - Same as simple, however AJAX style backend. Makes updates faster.</li>
+<li>/blue - A Blue UI with some graphics, AJAX style backend.</li>
+<li>/mobile.html - Works on cellphones, no frames, no nothing</li>
+<li>/status.html - Simple status page</li>
+<li>/status.xml - Simple status page in xml</li>
+<li>/nonos - User contributed UI</li>
+<li>/iSonosStub.js - Instructions for converting any iTunes Konfabulator widget to support Sonos</li>
+</ul>
+
+<h3>
+<a id="included-plugins" class="anchor" href="#included-plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Included Plugins:</h3>
+
+<p>There are several different plugins included. Click on the links for screenshots.</p>
+
+<ul>
+<li>/AlarmClock and Edit - A powerful multi alarm clock</li>
+<li>/MusicLog - Log all the songs played</li>
+<li>/LastFM - Beta LastFM submission integration</li>
+<li>/AutoReindex - Automatically reindex music library</li>
+<li>/Podcasts - Experimental plugin that plays podcasts without downloading</li>
+<li>/MagicSong, Edit, Demo - Add fake songs that perform tasks, such as play Podcasts without downloading or put Sonos to sleep</li>
+<li>/LinkSets and Edit - Simple interface to quickly go to various zone link scenerios</li>
+<li>/Nanny and Edit - Monitor zones for bad volume and more (in the future)</li>
+<li>AIM Bot - Interact with Sonos thru AIM or AOL.</li>
+</ul>
+
+<h3>
+<a id="why-should-i-run-it" class="anchor" href="#why-should-i-run-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why should I run it?</h3>
+
+<ul>
+<li>Free text search! Find songs quickly.</li>
+<li>Need Sonos controller for a cellphone, pda, ...</li>
+<li>Ability to use iTunes Konfabulator widgets with Sonos</li>
+<li>Learn a little about Perl, Javascript &amp; UPnP</li>
+<li>Plugins!</li>
+</ul>
+
+<h2>
+<a id="how-does-it-work" class="anchor" href="#how-does-it-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>How does it work?</h2>
+
+<p>A perl script runs and emulates a HTTP server and acts as an UPnP Control Point. The HTTP server portion handles all the requests from the UI, while the UPnP Control Point portion talks to the Sonos boxes. This design was used so Apache or another web server isn't required. UPnP requires that a piece of software is always running to listen for UPnP Events, which is why traditional CGI software can't be used.</p>
+
+<p>It assumes all Sonos boxes that respond are on the same Sonos Network, which should be true for most users.</p>
+
+<h2>
+<a id="where-do-i-get-it" class="anchor" href="#where-do-i-get-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Where do I get it?</h2>
+
+<p>sonosweb-0.72.tar.gz Windows Installer: sonosweb-0.72.exe</p>
+
+<ul>
+<li><a href="https://github.com/ke4roh/carpos/blob/master/HISTORY">Change History</a></li>
+<li><a href="http://www.purple.org/sonos/previous.html">Previous Versions</a></li>
+</ul>
+
+<h2>
+<a id="can-you-make-it-do-this-it-doesnt-work-help" class="anchor" href="#can-you-make-it-do-this-it-doesnt-work-help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Can you make it do this? It doesn't work! Help!</h2>
+
+<p>Send mail to <a href="mailto:sonos@purple.org">sonos@purple.org</a> or post to the Sonos Forums, with questions or suggestions. Please look at the known issues below first.</p>
+
+<h2>
+<a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Known Issues</h2>
+
+<ul>
+<li>Same network as Sonos - The sonos.pl script must be run on a machine that is on the same network as the Sonos boxes. For exampe don't run it at work to control home boxes, however the web browser software can be used anywhere.</li>
+<li>Multiple Ethernet Interfaces - Currently doesn't support running on a machine with multiple active interfaces - Fixed in 0.49</li>
+<li>XP Firewall - perl &amp; sonosweb must be added to the allowed firewall applications, usually Windows will prompt to add it automatically.</li>
+<li>Linux Firewall - The following ports must be opened to the local network
+-- tcp 8001 - The web browser software uses this port, opening to the internet allows anyone to control too
+-- tcp 8058 - UPnP subscription port
+-- udp 8008 - UPnP ssdp search port
+-- udp 1900 - UPnP ssdp port</li>
+</ul>
+
+<h2>
+<a id="will-it-run-on-windows-or-os-x" class="anchor" href="#will-it-run-on-windows-or-os-x" aria-hidden="true"><span class="octicon octicon-link"></span></a>Will it run on Windows or OS X?</h2>
+
+<p>Yes. For Windows you can download the installer above, and then you don't need to install Perl seperately.</p>
+
+<p>However for OS X or if you want to do development you will want to install ActiveState Perl. (They even have downloads for UNIX if you don't have perl installed.)</p>
+
+<ul>
+<li>Download the sonosweb.tar.gz file above</li>
+<li>Uncompress the sonosweb.tar.gz archive, if using WinZip make sure "Use folder names" IS checked</li>
+<li>Goto <a href="http://www.activestate.com/Products/ActivePerl/">http://www.activestate.com/Products/ActivePerl/</a>
+</li>
+<li>Download ActivePerl 5.8.7.815 or newer (click the "ActivePerl Free Distribution" link and follow instructions)</li>
+<li>Install ActivePerl</li>
+<li>After installing ActivePerl, on Windows:</li>
+<li>Open a new shell (Start Menu -&gt; Run -&gt; "cmd")</li>
+<li>In the shell run the "ppm" command</li>
+<li>At the ppm command prompt type "install HTML-Template"</li>
+<li>Once it has finished type "quit"</li>
+<li>Change into the sonos directory that was extracted above</li>
+<li>Type "perl sonos.pl"</li>
+<li>After installing ActivePerl, on OS X:
+-- Open a new terminal window
+-- At the prompt run the "/usr/local/ActivePerl-5.8/bin/ppm" command
+-- At the ppm command prompt type "install HTML-Template"
+-- Once it has finished type "quit"
+-- Change into the sonos directory that was extracted above
+-- Type "/usr/local/ActivePerl-5.8/bin/perl sonos.pl"
+-- Now using a browser on the same machine, goto http://localhost:8001
+-- To use from a different machine find the machine's IP address using the ipconfig or ifconfig command, use that ip instead of localhost above
+-- All done - Please let me know if this works/doesn't work for you.</li>
+</ul>
+
+<h3>
+<a id="other-sonos-projects" class="anchor" href="#other-sonos-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Sonos Projects</h3>
+
+<p><a href="http://board.homeseer.com/showthread.php?p=700323#post700323">HomeSeer Integration</a>
+<a href="http://groups-beta.google.com/group/Sonos">Google Discussion Group</a>
+<a href="http://www.ihol.org/sonos/">Sonos Queue Tool</a></p>
+
+<h3>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO</h3>
+
+<ul>
+<li>Group Volume Control</li>
+<li>Add more features to the Nanny Plugin</li>
+<li>Need Logo &amp; Catchy Name!</li>
+<li>Need better UI and images</li>
+<li>Become a Zone</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Carpos maintained by <a href="https://github.com/ke4roh">ke4roh</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
